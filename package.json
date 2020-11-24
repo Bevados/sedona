@@ -1,0 +1,29 @@
+{
+  "name": "sedona",
+  "version": "1.0.0",
+  "description": "Sedona project by html Academy course",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Bevados/sedona.git"
+  },
+  "author": "ladibe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bevados/sedona/issues"
+  },
+  "homepage": "https://github.com/Bevados/sedona#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.1.10"
+  }
+}
