@@ -27,5 +27,5 @@ gulp.task('serve', gulp.series('style', function() {
     });
     gulp.watch('source/sass/**/*.scss', gulp.parallel('style'));
     gulp.watch("source/*.html").on('change', server.reload);
-    }));
+}));
 

@@ -1,0 +1,78 @@
+.site-list {
+    @include font('PTSans', 18px, 40px, bold, #000);
+    text-transform: uppercase;
+}
+
+// Запер стили для всплывающего меню //
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .site-list {
+        position: relative;
+        width: 100%;
+        margin-top: -231px;
+        text-align: center;
+        background-color: #81b3d2;
+    }
+
+    .site-list__item {
+        box-shadow: 0 1px rgba($color: #010101, $alpha: 0.2),
+                    inset 0 2px rgba($color: #fff, $alpha: 0.2);
+        &:first-child::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 2px;
+            background-color: #81b3d2;
+        }
+        &:last-child::after {
+            position: absolute;
+            content: '';
+            bottom: -1px;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 10px;
+            background-color: #81b3d2;
+        }
+        & a {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            display: inline-block;
+            width: 60%;
+            color: #fff;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .site-list {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 26px;
+
+    }
+
+    .site-list__item {
+        width: 25%;
+        & a {
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: inline-block;
+            color: #000;
+            cursor: pointer;
+        }
+
+    }
+}
+
+@media (width: 1200px) {
+    .site-list {
+        padding-right: 70px;
+        padding-left: 91px;
+    }
+}
