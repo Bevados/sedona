@@ -1,0 +1,120 @@
+.cause-2 {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #81b3d2;
+}
+
+.cause-2__wrapper {
+    padding-top: 39px;
+    padding-bottom: 39px;
+}
+
+.cause-2__name {
+    margin-bottom: 9px;
+    @include font ('PTSans', 18px, 26px, bold, #fff);
+    & br {
+        display: none;
+    }
+}
+
+.cause-2__number {
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    @include font ('PTSans', 14px, 21px, normal, #fff);
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: center;
+        display: inline-block;
+        width: 10px;
+        height: 2px;
+        background-color: #fff;
+    }
+    &::before {
+        left: -13px;
+    }
+    &::after {
+        right: -13px;
+    }
+}
+
+.cause-2__addition {
+    @include font ('PTSans', 14px, 21px, normal, #fff);
+}
+
+.cause-2__picture {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.cause-2__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 521px) {
+    .cause-2__wrapper {
+        padding-top: 45px;
+        padding-right: 6.51%;
+        padding-bottom: 44px;
+        padding-left: 6.51%;
+        width: 256px;
+        float: right;
+    }
+    .cause-2__name {
+        margin-bottom: 10px;
+        font-size: 21px;
+        & br {
+            display: block;
+        }
+    }
+
+    .cause-2__number {
+        margin-bottom: 21px;
+    }
+
+    .cause-2__picture {
+        height: 256px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cause-2__wrapper {
+        width: 33.333%;
+    }
+
+    .cause-2__addition {
+    & br {
+        display: none;
+    }
+}
+    .cause-2__picture {
+        width: 66.666%;
+    }
+}
+
+@media (min-width: 1052px) {
+    .cause-2__wrapper {
+        padding-top: 53px;
+        padding-bottom: 57px;
+    }
+}
+
+@media (min-width: 1105px) {
+    .cause-2__wrapper {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+}

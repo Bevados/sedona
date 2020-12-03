@@ -1,0 +1,111 @@
+.cause-minor {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #eeeeee;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cause-minor__item {
+    padding: 27px 20px 27px 20px;
+    position: relative;
+}
+
+.cause-minor__road,
+.cause-minor__tourists {
+    padding-top: 28px;
+}
+
+.cause-minor__name {
+    margin-bottom: 9px;
+    @include font ('PTSans', 18px, 26px, bold, #000);
+    & br {
+        display: none;
+    }
+}
+
+.cause-minor__number {
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+    @include font ('PTSans', 14px, 21px, normal, #000);
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: center;
+        display: inline-block;
+        width: 9px;
+        height: 2px;
+        background-color: #000;
+    }
+    &::before {
+        left: -13px;
+    }
+    &::after {
+        right: -13px;
+    }
+}
+
+.cause-minor__additio {
+    @include font ('PTSans', 14px, 21px, normal, #000);
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .cause-minor__road::before,
+    .cause-minor__tourists::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        left: 20px;
+        right: 20px;
+        display: inline-block;
+        width: auto;
+        height: 1px;
+        background-color: #d6d6d6;
+    }
+}
+
+@media (min-width: 340px) {
+    .cause-minor__additio br {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .cause-minor {
+        display: flex;
+    }
+
+    .cause-minor__road,
+    .cause-minor__tourists {
+        padding-top: 0;
+    }
+
+    .cause-minor__item {
+        padding: 45px 6.5% 44px;
+        width: 33.333%;
+    }
+
+    .cause-minor__name {
+        margin-bottom: 10px;
+        font-size: 21px;
+        & br {
+            display: block;
+        }
+    }
+
+    .cause-minor__number {
+        margin-bottom: 21px;
+    }
+}
+
+@media (min-width: 866px) {
+    .cause-minor__item {
+        padding: 45px 4.8% 65px;
+
+    }
+}
