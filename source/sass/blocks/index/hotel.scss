@@ -1,8 +1,8 @@
 .hotel {
     margin: 0 auto;
-
     width: 100%;
     max-width: 1200px;
+    background-color: #fff;
     text-align: center;
     text-transform: uppercase;
 }
@@ -36,6 +36,21 @@
     width: 100%;
     background: none;
     background-color: #81b3d2;
+    &:hover {
+        background-color: #669ec0;
+    }
+    &:active {
+        background-color: #5496bd;
+    }
+    &:active .hotel__search__text {
+        opacity: 0.3;
+    }
+    &:disabled {
+        background-color: #e5e5e5;
+    }
+    &:disabled .hotel__search__text {
+        opacity: 1;
+    }
 }
 
 .hotel__search__text {
