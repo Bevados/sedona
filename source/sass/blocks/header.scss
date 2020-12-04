@@ -33,6 +33,15 @@
     }
 }
 
+.page-header__invitation__img {
+    padding-top: 90px;
+    padding-bottom: 85px;
+    display: block;
+    text-align: center;
+}
+
+
+
 @media (min-width: 321px) {
     .page-header__invitation {
         background-image: url('../img/invitation-bg.jpg');
@@ -46,14 +55,6 @@
         background-image: url('../img/invitation-bg_2x.jpg');
     }
 }
-
-.page-header__invitation__img {
-    padding-top: 90px;
-    padding-bottom: 85px;
-    display: block;
-    text-align: center;
-}
-
 
 // Всплывающее меню для мобилки //
 @media (min-width: 320px) and (max-width: 767px) {
