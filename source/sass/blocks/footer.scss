@@ -19,8 +19,12 @@
     @include font ('PTSans', 21px, 26px, bold, #000);
 }
 
-.page-footer__social {
+.page-footer__social__wrapper {
     margin-bottom: 40px;
+    width: 151px;
+}
+
+.page-footer__social {
     width: 151px;
     display: flex;
     justify-content: space-between;
@@ -110,37 +114,32 @@
         padding-left: 7.81%;
         padding-right: 7.81%;
         display: flex;
-        justify-content: space-between;
         width: auto;
         box-sizing: content-box;
         text-align: left;
         align-items: center;
     }
-    .page-footer__hashtag {
-        margin: 0;
-        margin-right: 14.57%;
-    }
 
-    .page-footer__social {
-        margin-bottom: 0;
-        margin-right: 20%;
-    }
-}
-
-@media (min-width: 768px) {
-    .page-footer__wrapper {
-        padding-left: 7.81%;
-        padding-right: 7.81%;
-    }
 
     .page-footer__hashtag {
         margin: 0;
-        margin-right: 17%;
+        width: 33.333%;
+    }
+
+    .page-footer__social__wrapper {
+        margin-bottom: 0;
+        width: 33.333%;
     }
 
     .page-footer__social {
-        margin-bottom: 0;
-        margin-right: 22.916%;
+        margin: 0 auto;
+    }
+
+    .page-footer__htmlacademy {
+        width: 33.333%;
+        & svg {
+            float: right;
+        }
     }
 }
 
@@ -149,10 +148,6 @@
         padding-left: 8%;
         padding-right: 8%;
     }
-
-    .page-footer__hashtag {
-        margin-right: 18%;
-    }
 }
 
 @media (min-width: 1000px) {
@@ -160,22 +155,8 @@
         padding-left: 10%;
         padding-right: 10%;
     }
-
-    .page-footer__hashtag {
-        margin-right: 19%;
-    }
 }
 
-@media (min-width: 1200px) {
-    .page-footer__wrapper {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .page-footer__hashtag {
-        margin-right: 19%;
-    }
-}
 
 
 
