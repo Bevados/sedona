@@ -1,0 +1,115 @@
+.foto {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.foto__list {
+    padding-top: 23px;
+    padding-bottom: 18px;
+    padding-right: 6.25%;
+    padding-left: 6.25%;
+    position: relative;
+}
+
+.foto__item {
+    padding-bottom: 40px;
+    position: relative;
+    width: 100%;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+.foto__picture {
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 100%;
+    height: 280px;
+}
+
+.foto__signature__wrapper {
+    margin-bottom: 6px;
+}
+
+.foto__name {
+    margin-bottom: 2px;
+    @include font ('PTSans', 14px, 24px, bold, #000);
+    text-transform: uppercase;
+}
+
+.foto__author {
+    @include font ('PTSans', 13px, 24px, normal, #000);
+}
+
+.foto__like {
+    display: flex;
+}
+
+.foto__like-icon {
+    margin-right: 15px;
+    width: 23px;
+    height: 21px;
+    background: none;
+    opacity: 0.3;
+}
+
+.foto__quantity-likes {
+    @include font ('PTSans', 14px, 24px, bold, #000);
+}
+
+//Мобильные подчёркивания
+@media (min-width: 320px) and (max-width: 458px) {
+    .foto__list::before,
+    .foto__list::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #e5e5e5;
+    }
+    .foto__list::before{
+        top: 0;
+    }
+    .foto__list::after{
+        bottom: 0;
+    }
+
+    .foto__item::after {
+        content: '';
+        position: absolute;
+        bottom: 22px;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #e5e5e5;
+    }
+    .foto__item:last-child::after {
+        display: none;
+    }
+}
+
+
+@media (min-width: 321px) {
+    .foto__item {
+        overflow: hidden;
+    }
+
+    .foto__picture {
+        height: 267px;
+    }
+
+    .foto__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 267px;
+    }
+}

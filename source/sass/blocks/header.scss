@@ -28,7 +28,7 @@
 }
 
 @media (min-resolution: 1.5dppx) {
-	.class {
+	.page-header__invitation {
         background-image: url('../img/invitation-bg-mob_2x.jpg');
     }
 }
@@ -40,8 +40,6 @@
     text-align: center;
 }
 
-
-
 @media (min-width: 321px) {
     .page-header__invitation {
         background-image: url('../img/invitation-bg.jpg');
@@ -50,8 +48,8 @@
     }
 }
 
-@media (min-resolution: 1.5dppx) {
-	.class {
+@media (min-width: 321px) and (min-resolution: 1.5dppx) {
+    .page-header__invitation {
         background-image: url('../img/invitation-bg_2x.jpg');
     }
 }
@@ -119,7 +117,6 @@
     }
 }
 
-
 @media (min-width: 768px) {
     .page-header-nav {
         display: block;
@@ -136,5 +133,55 @@
         padding-top: 77px;
         padding-bottom: 90px;
     }
+}
 
+//Правки для страницы Photo.html
+
+.page-header__invitation--photo {
+    background-image: url('../img/photo-invitation-bg-mob.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom
+}
+
+@media (min-resolution: 1.5dppx) {
+	.page-header__invitation--photo {
+        background-image: url('../img/photo-invitation-bg-mob_2x.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom
+    }
+}
+
+.page-header__invitation__img--photo {
+    padding-top: 52px;
+    padding-bottom: 67px;
+    height: 39px;
+    box-sizing: content-box;
+}
+
+@media (min-width: 768px) {
+    .page-header__invitation--photo {
+        background-image: url('../img/photo-invitation-bg-table_desk.jpg');
+        background-repeat: no-repeat;
+        background-position: center bottom
+    }
+
+    	.page-header__invitation__img--photo {
+        padding-top: 95px;
+        padding-bottom: 117px;
+        height: 78px;
+    }
+}
+
+@media (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .page-header__invitation--photo {
+        background-image: url('../img/photo-invitation-bg-table_desk_2x.jpg');
+    }
+}
+
+@media (min-width: 1200px) {
+	.page-header__invitation__img--photo {
+        padding-top: 101px;
+        padding-bottom: 120px;
+        height: 80px;
+    }
 }
