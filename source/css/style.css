@@ -1320,3 +1320,50 @@ a {
     color: #fff; }
   .foto__like-icon {
     opacity: 1.0; } }
+
+.video {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  text-transform: uppercase;
+  text-align: center; }
+
+.vidoe__title {
+  padding: 33px 12.5% 35px; }
+
+.video-title__name {
+  margin-bottom: 26px;
+  font-family: "PTSans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000; }
+
+.video-title__reasons {
+  font-family: "PTSans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000; }
+  .video-title__reasons br {
+    display: none; }
+
+@media (min-width: 466px) {
+  .vidoe__title {
+    padding-top: 67px;
+    padding-bottom: 73px; } }
+
+@media (min-width: 550px) {
+  .video-title__reasons br {
+    display: block; } }
+
+@media (min-width: 768px) {
+  .video-title__name {
+    margin-bottom: 30px;
+    font-size: 30px; } }
+
+@media (min-width: 921px) {
+  .vidoe__title {
+    padding-top: 71px;
+    padding-bottom: 71px; } }
