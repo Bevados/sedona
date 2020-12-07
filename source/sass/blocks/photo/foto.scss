@@ -8,8 +8,6 @@
 .foto__list {
     padding-top: 23px;
     padding-bottom: 18px;
-    padding-right: 6.25%;
-    padding-left: 6.25%;
     position: relative;
 }
 
@@ -20,6 +18,12 @@
     &:last-child {
         padding-bottom: 0;
     }
+}
+
+.foto__item__wrapper {
+    padding-right: 6.25%;
+    padding-left: 6.25%;
+    width: 100%;
 }
 
 .foto__picture {
@@ -60,7 +64,7 @@
 }
 
 //Мобильные подчёркивания
-@media (min-width: 320px) and (max-width: 458px) {
+@media (min-width: 320px) and (max-width: 465px) {
     .foto__list::before,
     .foto__list::after {
         content: '';
@@ -92,15 +96,17 @@
         display: none;
     }
 }
+//Мобильные подчёркивания - конец кода
 
 
 @media (min-width: 321px) {
-    .foto__item {
+    .foto__item__wrapper {
         overflow: hidden;
     }
 
     .foto__picture {
         height: 267px;
+        position: relative;
     }
 
     .foto__img {
@@ -111,5 +117,134 @@
         object-position: center;
         width: 100%;
         height: 267px;
+    }
+}
+
+@media (min-width: 459px) {
+    .foto__item__wrapper {
+        padding-right: 7.81%;
+        padding-left: 7.81;
+        width: 100%;
+    }
+}
+
+@media (min-width: 466px) {
+    .foto__list {
+        padding-top: 42px;
+        padding-left: 6.25%;
+        padding-bottom: 0;
+        padding-right: 6.25%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .foto__item {
+        padding-bottom: 0;
+        width: 50%;
+        &:first-child {
+            width: 100%;
+        }
+    }
+
+    .foto__item__wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .foto__picture {
+        margin-bottom: 0;
+    }
+
+    .foto__signature {
+        margin-top: -3px;
+        padding: 15px 0 15px;
+        background-color: #f2f2f2;
+    }
+
+    .foto__signature__wrapper {
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+
+    .foto__like {
+        width: 65px;
+    }
+}
+
+@media (min-width: 466px) and (max-width: 920px) {
+    .foto__item {
+        &:nth-child(2n+1):not(:first-child) .foto__signature {
+            background-color: #eaeaea;
+        }
+    }
+}
+
+@media (min-width: 630px) {
+    .foto__signature {
+        padding: 15px 20px 15px 20px;
+    }
+}
+
+@media (min-width: 740px) {
+    .foto__signature {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .foto__list {
+        padding-top: 0;
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .foto__item {
+        &:first-child .foto__picture {
+            height: 400px;
+        }
+        &:first-child .foto__img {
+            height: 400px;
+        }
+    }
+}
+
+@media (min-width: 921px) {
+    .foto__list {
+        padding: 0;
+    }
+
+    .foto__item {
+        margin-bottom: -3px;
+        &:not(:first-child) {
+            width: 33.333%
+        }
+
+    }
+
+    .foto__signature {
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        width: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    .foto__name {
+        color: #fff;
+    }
+
+    .foto__author {
+        color: #fff;
+    }
+
+    .foto__quantity-likes {
+        color: #fff;
+    }
+
+    .foto__like-icon {
+        opacity: 1.0;
     }
 }
